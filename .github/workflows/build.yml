@@ -2,9 +2,7 @@ name: Meu primeiro Workflow
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ main, developer ]
 
   workflow_dispatch:
 
@@ -12,8 +10,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     name: Teste automatizando
-    runs-on: self-hosted
-
+    runs-on: ubuntu-hosted
     steps:
       - name: Step 1
       - uses: actions/checkout@v2
